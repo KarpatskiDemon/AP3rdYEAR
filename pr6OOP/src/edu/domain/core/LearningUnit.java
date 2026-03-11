@@ -1,0 +1,37 @@
+package edu.domain.core;
+
+public abstract class LearningUnit {
+    protected String lesson;
+    protected String materials;
+    protected String test;
+
+    private static int count = 0;
+
+    protected LearningUnit() { count++; }
+
+    public LearningUnit(String lesson, String materials, String test) {
+        this.lesson = lesson;
+        this.materials = materials;
+        this.test = test;
+        count++;
+    }
+
+    public static int total() { return count; }
+
+    public abstract void process();
+    public abstract void evaluate();
+    public abstract String describe();
+
+    void prepare() { System.out.println("core.prepare:" + lesson); }
+
+    public String getLesson() { return lesson; }
+    public String getMaterials() { return materials; }
+    public String getTest() { return test; }
+
+    public String toString() {
+        return getClass().getSimpleName() + " : \n" +
+                "Lesson : " + lesson + "\n" +
+                "Materials : " + materials + "\n" +
+                "Test : " + test + "\n";
+    }
+}
