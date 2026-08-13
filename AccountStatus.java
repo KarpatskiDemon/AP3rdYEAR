@@ -1,0 +1,14 @@
+package ua.edu.fkzi.bank.event;
+
+public enum EventType {
+    USER_CREATED,
+    ACCOUNT_OPENED,
+    MONEY_DEPOSITED,
+    MONEY_WITHDRAWN,
+    TRANSFER_COMPLETED,
+    ACCOUNT_BLOCKED,
+    ACCOUNT_UNBLOCKED,
+    INTEREST_ACCRUED,
+    STATE_SAVED,
+    STATE_RESTORED
+}
